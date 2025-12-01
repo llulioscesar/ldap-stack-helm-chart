@@ -33,7 +33,6 @@ spec:
           {{- else }}
           args:
             - start
-            - --optimized
             {{- if $realmImportEnabled }}
             - --import-realm
             {{- end }}
