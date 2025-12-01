@@ -79,7 +79,8 @@ openldap:
   # Persistence
   persistence:
     enabled: true
-    size: 1Gi
+    # Storage class (overrides global.storageClass)
+    storageClass: ""
     # Separate PVCs for data and config
     data:
       size: 1Gi
