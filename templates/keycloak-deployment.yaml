@@ -63,8 +63,12 @@ spec:
             # Production settings
             - name: KC_HOSTNAME
               value: {{ required "keycloak.production.hostname is required in production mode" .Values.keycloak.production.hostname | quote }}
-            - name: KC_PROXY
-              value: "edge"
+            - name: KC_PROXY_HEADERS
+              value: "xforwarded"
+            - name: KC_HTTP_ENABLED
+              value: "true"
+            - name: KC_HOSTNAME_STRICT
+              value: "false"
             - name: KC_DB
               value: {{ .Values.keycloak.production.database.vendor | quote }}
             - name: KC_DB_URL_HOST
