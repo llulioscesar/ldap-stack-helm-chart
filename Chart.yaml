@@ -2,7 +2,7 @@ apiVersion: v2
 name: ldap-stack
 description: OpenLDAP + phpLDAPadmin + Keycloak stack for centralized identity management with SSO support
 type: application
-version: 1.1.1
+version: 1.1.2
 appVersion: "2.6.0"
 annotations:
   artifacthub.io/signKey: |
@@ -28,7 +28,7 @@ annotations:
   artifacthub.io/prerelease: "false"
   artifacthub.io/changes: |
     - kind: fixed
-      description: Remove --optimized flag from Keycloak production start command
+      description: Fix Keycloak production mode proxy configuration (KC_PROXY_HEADERS, KC_HTTP_ENABLED)
 keywords:
   - ldap
   - openldap
